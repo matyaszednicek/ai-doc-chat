@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./server/:/app
+    container_name: ai-doc-chat-api
+    # ports:
+    #   - '4002:8080'
+    command: npm run dev
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./client:/app
+    container_name: ai-doc-chat-client
+    # ports:
+    #   - '4001:3000'
+    command: npm run dev
+
+  webserver:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.dev
+    ports:
+      - '80:80'
+    restart: always

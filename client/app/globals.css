@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-shadow {
+  @apply ring-2 ring-gray-800 shadow-gray-800 shadow-[5px_4px_1px_1px_rgba(0,0,0,0.4)];
+}
