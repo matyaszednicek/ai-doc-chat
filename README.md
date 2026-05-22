@@ -1,3 +1,5 @@
+> From a time when vibecoding wasnt a thing yet
+
 # AI Doc Chat (NodeJS + Next.js)
 
 Super simple, little to no styling. Upload PDF and ask questions about it.
